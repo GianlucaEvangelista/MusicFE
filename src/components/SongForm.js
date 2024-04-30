@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { addSong } from '../services/addSong';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-const SongForm = () => {
+const SongForm = ({addSong}) => {
   const [formData, setFormData] = useState({
     title: '',
     artist: '',

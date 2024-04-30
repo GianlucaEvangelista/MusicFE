@@ -1,16 +1,7 @@
 import Song from './Song';
 import Table from 'react-bootstrap/Table';
-import React, { useState, useEffect } from 'react';
 
-function SongList() {
-    const [songs, setSongs] = useState([]);
-  
-    useEffect(() => {
-        fetch('http://localhost:8080/songs')
-            .then(response => response.json())
-            .then(data => setSongs(data))
-            .catch(error => console.error('Error fetching songs:', error));
-    }, []);
+function SongList({songs}) {
 
     return (
         <div className="song-list">

@@ -1,5 +1,3 @@
-import Table from 'react-bootstrap/Table';
-
 function Song({ id, title, artist, genre, album, year }) {
     return (
             <tr>
