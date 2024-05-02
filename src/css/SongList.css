@@ -1,0 +1,23 @@
+.song-list {
+    padding: 20px;
+}
+
+.song-list .table {
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.song-list th {
+    background-color: #549c24;
+    color: white;
+    text-align: center;
+}
+
+.song-list td {
+    vertical-align: middle;
+}
+
+.song-list .btn-danger {
+    margin-top: 5px;
+    width: 100%;
+}

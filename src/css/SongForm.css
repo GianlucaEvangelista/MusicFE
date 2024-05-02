@@ -1,0 +1,25 @@
+.song-form-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.song-form-container .form-group {
+    margin-bottom: 15px;
+}
+
+.song-form-container .form-control {
+    max-width: 100%;
+}
+
+.song-form-container .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: block;
+    width: fit-content;
+    margin: 30px auto 30px;
+}

@@ -2,6 +2,8 @@ import Table from 'react-bootstrap/Table';
 
 import Song from './Song';
 
+import '../css/SongList.css'
+
 function SongList({ songs, removeSong }) {
 
     return (
@@ -14,6 +16,7 @@ function SongList({ songs, removeSong }) {
                         <th>Genre</th>
                         <th>Album</th>
                         <th>Year</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

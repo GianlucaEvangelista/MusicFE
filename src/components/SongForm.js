@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+import '../css/SongForm.css'
+
 const SongForm = ({ addSong }) => {
   const [formData, setFormData] = useState({
     title: '',
@@ -38,7 +40,7 @@ const SongForm = ({ addSong }) => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} className="song-form-container">
       <Form.Group className="mb-3">
         <Form.Label>Title</Form.Label>
         <Form.Control
@@ -99,7 +101,7 @@ const SongForm = ({ addSong }) => {
       </Form.Group>
 
       <Button variant="primary" type="submit">
-        Add Song
+        Add song
       </Button>
     </Form>
   );

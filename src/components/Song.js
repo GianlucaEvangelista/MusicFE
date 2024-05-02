@@ -1,3 +1,5 @@
+import '../css/Song.css'
+
 function Song({ id, title, artist, genre, album, year, removeSong }) {
     return (
         <tr>
@@ -7,7 +9,7 @@ function Song({ id, title, artist, genre, album, year, removeSong }) {
             <td>{album}</td>
             <td>{year}</td>
             <td>
-                <button className="btn btn-danger" onClick={() => removeSong(id)}>Remove Song</button>
+                <button className="btn btn-danger" onClick={() => removeSong(id)}>Remove</button>
             </td>
         </tr>
     )

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './css/App.css';
 
 import Logo from './components/Logo';
 import SongList from './components/SongList';
