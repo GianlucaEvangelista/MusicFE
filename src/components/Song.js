@@ -1,4 +1,4 @@
-function Song({ id, title, artist, genre, album, year }) {
+function Song({ id, title, artist, genre, album, year, removeSong }) {
     return (
             <tr>
                 <td>{title}</td>
@@ -6,6 +6,9 @@ function Song({ id, title, artist, genre, album, year }) {
                 <td>{genre}</td>
                 <td>{album}</td>
                 <td>{year}</td>
+                <td>
+                    <button className="btn btn-danger" onClick={() => removeSong(id)}>Remove Song</button>
+                </td>
             </tr>
     )
 }

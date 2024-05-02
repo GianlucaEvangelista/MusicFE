@@ -21,3 +21,13 @@ export const addSong = async (songData) => {
   }
   return await response.json();
 };
+
+export const removeSong = async (songId) => {
+  const response = await fetch(`${baseUrl}/${songId}`, {
+    method: 'DELETE',
+  });
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.ok;
+};

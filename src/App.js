@@ -4,6 +4,7 @@ import SongList from './components/SongList';
 import SongForm from './components/SongForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { addSong } from './services/songServices';
+import { removeSong } from './services/songServices';
 import { fetchSongs } from './services/songServices';
 
 function App() {
@@ -25,12 +26,23 @@ function App() {
     }
   };
 
+  const handleRemoveSong = async (songId) => {
+    try {
+      await removeSong(songId);
+      const updatedSongs = await fetchSongs();
+      setSongs(updatedSongs);
+    } catch (error) {
+      console.error('Error removing song:', error);
+    }
+  };
+
+
   return (
     <div className="app">
       <h1>Add a new song</h1>
       <SongForm addSong={handleAddSong} />
       <h1>Songs</h1>
-      <SongList songs={songs} />
+      <SongList songs={songs} removeSong={handleRemoveSong}/>
     </div>
   );
 }
