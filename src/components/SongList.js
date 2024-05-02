@@ -1,7 +1,8 @@
-import Song from './Song';
 import Table from 'react-bootstrap/Table';
 
-function SongList({songs, removeSong}) {
+import Song from './Song';
+
+function SongList({ songs, removeSong }) {
 
     return (
         <div className="song-list">
@@ -17,12 +18,12 @@ function SongList({songs, removeSong}) {
                 </thead>
                 <tbody>
                     {songs.map((song) => (
-                        <Song key={song.id} {...song} removeSong={removeSong}/>
+                        <Song key={song.id} {...song} removeSong={removeSong} />
                     ))}
                 </tbody>
             </Table>
-      </div>
+        </div>
     );
-  };
-  
-  export default SongList;
+};
+
+export default SongList;

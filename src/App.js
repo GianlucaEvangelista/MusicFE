@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
 import SongList from './components/SongList';
 import SongForm from './components/SongForm';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { addSong } from './services/songServices';
 import { removeSong } from './services/songServices';
 import { fetchSongs } from './services/songServices';
@@ -42,7 +45,7 @@ function App() {
       <h1>Add a new song</h1>
       <SongForm addSong={handleAddSong} />
       <h1>Songs</h1>
-      <SongList songs={songs} removeSong={handleRemoveSong}/>
+      <SongList songs={songs} removeSong={handleRemoveSong} />
     </div>
   );
 }
