@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+import Logo from './components/Logo';
 import SongList from './components/SongList';
 import SongForm from './components/SongForm';
 
@@ -42,6 +43,7 @@ function App() {
 
   return (
     <div className="app">
+      <Logo />
       <h1>Add a new song</h1>
       <SongForm addSong={handleAddSong} />
       <h1>Songs</h1>
