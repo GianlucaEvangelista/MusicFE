@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  frontend:
+    networks:
+      - music_network
+    container_name: music_fe
+    image: music_fe_image
+    build:
+      context: ../MusicFE
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  backend:
+    networks:
+      - music_network
+    container_name: music_be
+    image: music_be_image
+    build:
+      context: ../MusicBE
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+
+  db:
+    networks:
+      - music_network
+    container_name: music_db
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: rootpassword
+      POSTGRES_DB: musicDB
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ../MusicBE/src/sql:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+volumes:
+  postgres_data:
+
+networks:
+  music_network:
+    name: music
